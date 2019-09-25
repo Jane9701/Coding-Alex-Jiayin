@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 2 Fonts and Color</title>
+	<style type="text/css">
+		li.answer{
+			background-color:#CCC562;
+			border-radius:5em;
+			padding:5px;
+			}
+		li.wrong{
+			background-color:#FF3737;
+			border-radius:5em;
+			padding:5px;
+		}
+		div.Feedback{
+			background-color:#94D6FF;
+			border-radius:5em;
+			padding:5px;
+		}
+		body{
+	
+			background-color:rgba(1,1,1,0.1);
+		}
+		.card{
+			background-color:white;
+			border:5px;
+			box-shadow: 2px;
+		}
+
+
+
+	/* Fonts and Color */
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
+
+		html{
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+		h1{
+			color:#7EA6C0;
+			font-size:2.7em;
+			text-align: center;
+
+		}
+		h2 {
+			color:#B58A8A;
+			text-align:center;
+		}
+		h3{
+			color:#C3CC9F;
+		}
+		
+		}
+		h1,h2,h3,ol{
+			font-weight: 400;
+
+		}
+		div,ol{
+			font-family: 'Cute Font', cursive;
+			line-height:1.5em;
+			font-size:1.4em;
+
+		}
+		@media only screen and (max-width:600px;){
+			ol,div{
+				line-height:0.5em;
+				font-size:1.1em;
+			}
+		/*Fonts and Colors End*/
+			
+		}
+
+	</style>
+	
+
+</head>
+<body>
+<h1> Quiz </h1>
+<h2> HTML </h2>
+
+<!-- Question 1-->
+<h3> Question 1 </h3>
+	<div class="card"> 
+		What tag should I use if I want to add an external javascript file?
+	
+	<ol type="A">
+	<li class="answer">script</li>
+	<li>javascript</li>
+	<li>include</li>
+	<li>style</li>
+	</ol>
+	</div>
+
+<!-- Question 2-->
+<h3> Question 2 </h3>
+	<div class="card"> 
+		What tag should I use if I want to add an external css file?
+	</div>
+	<ol type="A">
+		<li>script</li>
+		<li>javascript</li>
+		<li class="wrong">include</li>
+		<li>style</li>
+	</ol>
+	
+<div class="Feedback"> 
+		Feedback: The answer is D
+</div>
+
+</body>
+</html>
