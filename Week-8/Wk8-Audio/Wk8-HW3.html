@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<audio id="audioPlayer" width="500"  controls>
+  <source id="mp3_src" type="audio/mp3">
+  <source id="ogg_src" type="video/ogv">
+Your browser does not support the video tag.
+</audio>
+<div>
+
+	<!-- dropdown will have the filename as values of each option -->
+	<select id="audioSelector">
+		<option value="audios/Cute.mp3">Cute</option>
+		<option value="audios/Happyrock.mp3">Happyrock</option>
+		<option value="audios/Jazz.mp3">Jazz</option>
+		<option value="audios/Summer.mp3">Summer</option>
+	</select>
+
+	<!-- buttons -->
+	<button id="audLoad_btn">load</button>
+	<button id="audPlay_btn">play</button>
+	<button id="audPause_btn">pause</button>
+	<span id="timestamp"></span>
+
+</div>
+<script type="text/javascript">
+
+	//store all UI in in variables	
+	const audPlayer = document.querySelector("#audioPlayer");
+	const audLoad_btn = document.querySelector("#audLoad_btn");
+	const audPlay_btn = document.querySelector("#audPlay_btn");
+	const audPause_btn = document.querySelector("#audPause_btn");
+	const timestamp = document.querySelector("#timestamp");
+	const audioSelector = document.querySelector("#audioSelector");
+
+
+	//load video that is selected from the drop down
+	let loadAudio = () => {
+		document.querySelector("#mp3_src").src = audioSelector.value;
+		audioPlayer.load();
+	}
+
+	//function to play video
+	let playAudio = () => {
+		audioPlayer.play();
+	}
+
+	//function to pause video
+	let pauseAudio = () => {
+		audioPlayer.pause();
+	}
+
+	//function to get time from the video player
+	//NOTE: 
+	let getTimestamp = (event) => {
+		timestamp.innerHTML = event.target.currentTime;
+	}
+
+	//Add Event listeners too all the UI and point callbacks to functions
+
+	audLoad_btn.addEventListener("click", loadAudio);
+	audPlay_btn.addEventListener("click", playAudio);
+	audPause_btn.addEventListener("click", pauseAudio);
+	audioPlayer.addEventListener("timeupdate", getTimestamp);
+
+</script>
+
+
+</body>
+</html>
