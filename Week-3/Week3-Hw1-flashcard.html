@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 3 Flashcard</title>
+	<style type="text/css">
+		header,footer{
+			height:60px;
+			background-color:#FFF4D1;
+			position:fixed;
+			left:0;
+			right:0;
+		}
+
+		header{
+			top:0;
+		}
+		footer{
+			bottom:0;
+		}
+
+		li.answer{
+			background-color:#CCC562;
+			border-radius:5em;
+			padding:5px;
+			}
+		li.wrong{
+			background-color:#FF3737;
+			border-radius:5em;
+			padding:5px;
+		}
+		div.Feedback{
+			background-color:#94D6FF;
+			border-radius:5em;
+			padding:5px;
+		}
+		body{
+			background-color:rgba(1,1,1,0.1);
+		}
+		.card{
+/*What should I use to control position?
+			position:absolute;*/
+			background-color:white;
+			border:5px;
+			box-shadow: 2px;
+		}
+		
+		
+		button{
+
+/*Why this is not working
+			justify-content:flex-end;align-items:flex-end;*/
+/*Why the button on header is not working?*/
+			float:right;
+			height:40px;
+			width:100px;
+			border:2px;
+			box-shadow:3px;
+			border-radius:2px;
+			background-color:#BED7FF;
+			clear:both;
+
+		}
+	/*Dots in footer*/
+		.dot
+		{
+			height:20px;
+			width:20px;
+			border-radius:10px;
+			border:1px;
+			border-color:grey;
+			display:inline-block;
+		}
+		.green{
+			background-color:green;
+		}
+		.red{
+			background-color:red;
+		}
+		.blank{
+			background-color:#ffffff;
+		}
+	/*dots in footer*/
+
+
+	/* Fonts and Color */
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+
+		html{
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+		h1{
+			color:#7EA6C0;
+			font-size:1.5em;
+
+		}
+		h2 {
+			color:#B58A8A;
+		}
+	
+	
+		h1,h2,ol{
+			font-weight: 400;
+
+		}
+		div,ol{
+			font-family: 'Mansalva';
+			line-height:1.5em;
+			font-size:1.4em;
+
+		}
+		@media only screen and (max-width:600px;){
+			ol,div{
+				line-height:0.5em;
+				font-size:1.1em;
+			}
+		/*Fonts and Colors End*/
+			
+		}
+
+	</style>
+	
+
+</head>
+<body>
+	<header>
+		<h1 class="Quiz"> Quiz </h1>
+		<button>End Practice</button>
+	</header>
+
+
+<!-- Question 1-->
+	<div class="card"> 
+		<h2> Question 1 of 8 </h2>
+		What tag should I use if I want to add an external javascript file?
+	<ol type="A">
+	<li class="answer">script</li>
+	<li>javascript</li>
+	<li>include</li>
+	<li>style</li>
+	</ol>
+	</div>
+
+<footer>
+	<div class="dot green"></div>
+	<div class="dot red"></div>
+	<div class="dot blank"></div>
+	<div class="dot blank"></div>
+	<div class="dot blank"></div>
+	<div class="dot blank"></div>
+	<div class="dot blank"></div>
+	<div class="dot blank"></div>
+	<a href="http://www.google.com">View Report</a>
+	<button>Check Answer</button>
+</footer>
+</body>
+</html>

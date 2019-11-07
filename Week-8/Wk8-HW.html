@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    	<title></title>
+    </head>
+    <body>
+    
+    	<input type="text" id="num1"> 
+        <span id="operatorBox">+</span> 
+        <input type="text" id="num2"> 
+        <input type="button" value = "=" onclick"calc():">
+
+        = 
+        <input type = "text" id="result"> 
+        <span id="answerBox"></span>
+
+    	<div>
+    		<button id="add_btn">+</button>
+            <button id="subtract_btn">-</button>
+            <button id="divide_btn">÷</button>
+            <button id="multiply_btn">×</button>
+    	</div>
+    
+
+
+    	<script type="text/javascript">
+            const operators = {
+                add : "+",
+                divide: "÷",
+                multiply: "×",
+                subtract: "-"
+            }
+
+            addBtn=document.getElementById("add_btn");
+            addOperation= function(){
+
+                num1=document.getElementById("num1").value;
+                num2=document.getElementById("num2").value;
+
+                sum = parseInt(num1.value)+parseInt(num2.value);
+
+                result = document.getElementById("result")
+                result.innertext=sum ;
+
+
+
+
+            
+
+                
+            }
+            addBtn.addEventListener("click", addOperation);
+            /*function calc(){
+                var num1= parseFloat(document.getElementById("num1").value)
+                var num2= parseFloat(document.getElementById("num2").value) 
+
+                var op = document.getElementById("operators").value
+
+                if(op === "+"){}
+                    document.getElementById('result').value = num1+num2;
+                if(op === "-"){}
+                    document.getElementById('result').value = num1-num2;
+                if(op === "×"){}
+                    document.getElementById('result').value = num1*num2;
+                if(op === "/"){}
+                    document.getElementById('result').value = num1/num2;}*/
+    		
+    		// storing operator special charectors so you could easily refence them with dot notatin 
+    		// (ie. opertators.add)
+    		
+    
+    		// store all of your buttons, input fields, and spans in variables
+    		
+    
+    
+    
+    
+    		// create 4 function getSum, getDifference, getDifference, getProduct
+    		// do math and thten add content to item
+    
+    		
+    
+    
+    		
+    
+    		// add event listners with a click event for all of your buttons and add callback functin name
+    		
+    
+    
+    	</script>
+    
+    </body>
+    </html>

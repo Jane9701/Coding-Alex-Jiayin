@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		/*Question: splice?? https://www.w3schools.com/jsref/jsref_splice.asp*/
+		let people = ["Aaron", "Brian", "Abbie", "Joe", "Tina"];
+		//store the index of joe
+		let indexOfJoe=people.indexOf("Joe");
+		//????console.log(typeof "indexOfJoe");Why this is a string not a number? SHould I change it into .value
+		//remove it from the array
+		people.splice(indexOfJoe,1);
+		//shore result in the console
+		console.log(people);
+	</script>
+	</body>
+</html>
+

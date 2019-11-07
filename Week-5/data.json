@@ -1,0 +1,37 @@
+{
+	questions:[
+
+			{
+				question:"What color is the sky?",
+				responses:[
+					{
+						response:"blue",
+						isCorrect: true
+						
+					},
+					{
+						response:"red",
+						isCorrect: false
+						
+					}
+
+				]
+			},
+			{
+				question:"What color is the sun?",
+				responses:[
+					{
+						response:"blue",
+						isCorrect: false
+						
+					},
+					{
+						response:"red",
+						isCorrect: true
+						
+					}
+
+				]
+			}
+	]
+}

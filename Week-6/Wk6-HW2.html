@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id = "container"></div>
+
+	<script type="text/javascript">
+		const containerEle= document.querySelector("#container");
+
+		const parEle = document.createElement("p");
+		parEle.classList.add = "special";
+		parEle.setAttribute("id","something");
+		parEle.innerHTML = "hello";
+		containerEle.appendChild(parEle);
+	</script>
+
+</body>
+</html>
