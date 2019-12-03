@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#dragMeA,#dragMeB{
+			height:100px;
+			width:100px;
+			background-color: red;
+		}
+		#dropZone{
+			height:250px;
+			width:500px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="dragMeA" draggable="true"> drag meA</div>
+	<div id="dragMeB" draggable="true"> drag meB</div>
+	<div id="dropZone">Drop Zone</div>
+
+
+
+	<script type="text/javascript">
+		const dragMeA = document.querySelector("#dragMeA");
+		const dragMeB = document.querySelector("#dragMeB");
+		const dropZone = document.querySelector("#dropZone");
+
+
+		let onDragStart = (event) =>{
+			console.log(`----START DRAG:${event.currentTarget.id}`)
+		};
+		let onDragOver = (event) =>{
+			event.preventDefault();
+			console.log(`----START DRAG:${event.currentTarget.id}`)
+		};
+		let onDrop = (event) =>{
+			console.log(`----DROP HERE:${event.currentTarget.id}`)
+
+		};
+
+		dragMeA.addEventListener('dragstart',onDragStart);
+		dragMeB.addEventListener('dragstart',onDragStart);
+		dragMe.addEventListener('dragover',onDragOver);
+		dropzone.addEventListener('drop',onDrop)
+		
+	</script>
+</body>
+</html>
