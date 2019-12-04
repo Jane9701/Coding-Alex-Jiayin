@@ -853,8 +853,23 @@ input.pcl:-ms-input-placeholder {
     text-transform: uppercase;
     display: block;
 }
+.testimonials img {
+    width:650px;
+    display:inline-block;
+}
 .img-holder {
+    width:500px;
     margin-bottom: 20px;
+}
+.testimonials .formulaBlcok{
+    height:50px;
+    text-align: center;
+    font-weight:bold;
+    border: 2px solid #F0F5F8;
+    padding:15px;
+    border-radius: 10px;
+    background-color: #F1E6DF;
+    display:inline-block;
 }
 .testimonials .line-icon {
     margin-top: 40px;
