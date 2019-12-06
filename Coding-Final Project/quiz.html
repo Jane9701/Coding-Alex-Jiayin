@@ -25,6 +25,130 @@
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/color1.css">
+<!--    style for calculator-->
+<style>
+
+    table {
+        margin: auto;
+        background-color: #222;
+        width: 295px;
+        max-width: 295px;
+        height: 325px;
+        text-align: center;
+        border-radius: 4px;
+        padding-right: 10px;
+    }
+
+    input {
+        outline: 0;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        border: 0;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 60px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+    }
+
+    input:hover {
+        border: 0 solid #000;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 60px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 0 4px #b0d2cf;
+    }
+
+    input:active {
+        top: 4px;
+        border: 0 solid #000;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 60px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: none;
+    }
+
+    #display {
+        width: 265px;
+        max-width: 270px;
+        font-size: 26px;
+        text-align: right;
+        background-color: #bcbd95;
+        float: left;
+    }
+
+    #display:hover {
+        width: 270px;
+        font-size: 26px;
+        text-align: right;
+        background-color: #bcbd95;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    }
+
+    #display:active {
+        top: 5px;
+        width: 270px;
+        font-size: 26px;
+        text-align: right;
+        background-color: #bcbd95;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    }
+
+    .operator {
+        background-color: #cee9ea;
+        position: relative;
+    }
+
+    .operator:hover {
+        background-color: #cee9ea;
+        box-shadow: 0 4px #b0d2cf;
+    }
+
+    .operator:active {
+        top: 4px;
+        box-shadow: none;
+    }
+
+    #clear {
+        float: left;
+        position: relative;
+        display: block;
+        background-color: #ff9fa8;
+    }
+
+    #clear:hover {
+        float: left;
+        display: block;
+        background-color: #F297A0;
+        margin-bottom: 15px;
+        box-shadow: 0 4px #CC7F86;
+    }
+
+    #clear:active {
+        float: left;
+        top: 4px;
+        display: block;
+        background-color: #F297A0;
+        margin-bottom: 15px;
+        box-shadow: none;
+    }
+</style>
 
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -52,6 +176,56 @@
 					<li><a href="timeZone.html">Time Zone</a></li>
 					<li><a href="calculation.html">Calculation</a></li>
 					<li><a href="quiz.html">Quiz</a></li>
+					<li><!-- calculator start -->
+<div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Calculator</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form name="calculator" id="calculator_device1">
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" name="display" id="display" disabled>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                        <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                        <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                        <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                        <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                        <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                        <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                        <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                        <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+                        <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+                        <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                        <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                        <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- claculator end --></li>
+
+
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -80,18 +254,103 @@
 
 				<p>Mary is a little girl living in Cape Town. Her father is travelling to Perth, Austrilia for work. Mary’s father asks her to make a phone call at 10 P.M Perth time. Please help Mary to calculate when she should make this phone call at Cape Town time.</p>
 				<img src="images/Time/qz-2.png" alt="">
-					<br/><br/>
-					<button class="btn wrong"></button>
-					<button class="btn right"></button>
-					<p>1:00 PM at Cape Town</p>
-					<p>3:00 PM at Cape Town</p>
-					<p>5:00 PM at Cape Town</p>
-					<p>5:00 AM at Cape Town</p>
-				
+					<br/><br/>			
 			</div> 
 			
 		</div> 
-		<button class="btn load_more" onclick="window.location='timeDifference.html'">Lets Calculate Something!</button>
+<!-- A -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalA">
+A. 1:00 PM at Cape Town
+</button><br/>
+<!-- Check it -->
+<div class="modal fade" id="exampleModalA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Check it!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You are Wrong! 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- B -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalB">
+B.3:00 PM at Cape Town
+</button><br/>
+<!-- Check it -->
+<div class="modal fade" id="exampleModalB" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Check it!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You are Right!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- C -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+C.5:00 AM at Cape Town
+</button><br/>
+<!-- Check it -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Check it!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You are Wrong!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- D -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+D. 1:00 PM at Cape Town
+</button><br/>
+<!-- Check it -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Check it!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       You are Wrong!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 <!-- Time Zone Page End -->
 <!-- Go Through Class -->

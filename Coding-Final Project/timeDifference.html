@@ -52,13 +52,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav text-center">
-					<li><a href="index.html">Introduction</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="timeDifference.html">Time Difference</a></li>
 					<li><a href="timeZone.html">Time Zone</a></li>
 					<li><a href="calculation.html">Calculation</a></li>
-					<li class="logo-holder">                        
-						<a href="index.html"><img src="images/logos/logo.png" alt=""></a>
-					</li>
 					<li><a href="quiz.html">Quiz</a></li>
 				</ul>
 			</div>
@@ -75,13 +72,28 @@
 </header>
 <!-- Aboutus page header -->
 
-<section id="about_page" class="about_page text-center">
+<section id="about_page" class="about_page text-center" >
 	<div class="container">
-		<div class="img_part">
-			<img src="images/about/about11.png" alt="">
-		</div>
-		<div class="content_area">
-			<h3>Why different places on the earth have different times?</h3>
+		<div>
+    <video width="800" height="600" id="earth_video">
+        <source src="video/earth_video.mov" type="video/mp4">
+    </video>
+    <br/>
+    <button onclick="playVid()" type="button" style="border-radius: 30px">Rotate Earth</button>
+    <script>
+        var myVideo=document.getElementById("earth_video");
+        myVideo.controls = false;
+        myVideo.loop = true;
+        function playVid()
+        {
+            myVideo.play();
+            setTimeout(function(){myVideo.pause()},1500);
+        }
+    </script>
+ </div>
+
+		<h3>Why different places on the earth have different times?</h3>
+		<div class="content_area" style="text-align:left;">
 			<p>Our earth rotates on its own axis. Due to this rotation, different parts of the earth receive different amounts of sunlight. Thus causing morning, noon, evening and night. 
 				<br><br>
 				If we had a unified time across the world, then 12pm would be noon at some places. But it would be night or evening at other places, which would be inconvenient. <br><br>Hence, people at the different places on the earth create their own time in accordance with the sunlight. They conduct daily activtivites based on the local time.<br><br>Next, let’s take a look of the formation of time zones.</p>
