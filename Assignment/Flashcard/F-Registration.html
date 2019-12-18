@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<style type="text/css">
+		html{
+			font-family:sans-serif;
+		}
+		header{
+			display: flex;
+			justify-content: left;
+		}
+		section{
+			background-color: rgb(248,248,248);
+			height: 600px;
+			display: flex;
+			justify-content: left;
+		}
+		#signup{
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: left;
+			width: 400px;
+			height: 600px;
+			margin-top: 20px;
+		}
+		#name{
+			display: flex;
+			justify-content: space-between;
+			width: 300px;
+		}
+		#age{
+			display: flex;
+		}
+		h2{
+			font-size: 1.2em;
+			margin-top: 20px;
+		
+		}
+		a{
+			font-size: 1.9em;
+			margin: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1> Sign Up </h1>
+	</header>
+	
+	<section>	
+	<div id="signup">
+		<h2>Name</h2>
+		<div id="name">
+			<input type="text" placeholder="first name" name="first name">
+			<input type="text" placeholder="last name"  name="last name">
+		</div>	
+		<h2>Age</h2>
+		<div id="age">
+			<input type="number" placeholder="age" name="age" min="0">
+		</div>
+		<h2>Password</h2>
+		<div id="password">
+			<input type="password" placeholder="password" name="password">
+			<br>
+			<input type="password" placeholder="confirm password" name="password">
+		</div>
+		<h2>Are you a student or a instructor?</h2>
+		<div id="identity">
+			<select name="identity">
+				<option value="student">I am a tudent</option>
+				<option value="instructor">I am an instructor</option>
+			</select>
+		</div>
+		<h2>Practice Reminding Preferance</h2>
+		<div id="reminder">
+			<label><input type="checkbox" id="chboxA" name="chboxgroup" value="email">e-mail</label>
+			<label><input type="checkbox" id="chboxB" name="chboxgroup" value="text">text message</label>
+		</div>
+		<a href="http://google.com">sign up</a>
+	</div>
+</section>
+</body>
+</html>
