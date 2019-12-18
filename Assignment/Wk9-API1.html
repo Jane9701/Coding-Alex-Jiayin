@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	 <div class="out"></div>
+<script type="text/javascript">
+	let api = "https://api.giphy.com/v1/gifs/search?"
+	let apiKey = "&api_key=tjbmUCpiKqS8LMcmaob5LIeRPKozeUYj"
+	let query = "&q=rainbow"
+
+	function setup(){
+		noCanvas();
+		var url = api+ apiKey + query;
+		loadJSON (url, gotData);
+	}
+	function gotData (giphy){
+		for (var i=0; i<giphy.data.length; i++)
+		createImg(giphy.data[i].images.original.url);
+
+
+	}
+</script>
+</body>
+</html>

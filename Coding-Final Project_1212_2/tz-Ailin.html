@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try</title>
+	<style type="text/css">
+		}
+		button.left{
+			float：left;
+		}
+		button.right{
+			float:right;
+		}
+		.Img_tz-Aileen {
+			position: fixed;
+			width: 960px;
+			height: 550px;
+			z-index: 1;
+			padding-left:100px;
+
+		}
+		#yellowBar {
+			position: absolute;
+			width: 38.4px;
+			height: 550px;
+			left:0px;
+			background-color: rgba(255,255,0,50%);
+			z-index: 2;
+			left: 119.2px;
+		}
+
+		body {
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<button class="left">-</button>
+	<button class="right">+</button>
+	<div class="Img_tz-Aileen">
+		<img src="images/tz-Aileen.png">
+		
+
+	</div>	
+	<div id="yellowBar" >GO</div>
+
+
+	<script type="text/javascript">
+		const yellowBar = document.querySelector("#yellowBar");
+		const right = document.querySelector(".right");
+		const left = document.querySelector(".left");
+
+		let computedStyle = window.getComputedStyle(yellowBar);
+
+		i = 69.2;
+		let GoTo = () =>{
+			let currentLeft = (yellowBar.style.left)?yellowBar.style.left:computedStyle.left;
+			currentLeft =  parseInt(currentLeft) + 38.4; 
+			yellowBar.style.setProperty("left", `${currentLeft}px`);
+		}
+		let GoBack = () =>{
+			let currentLeft = (yellowBar.style.left)?yellowBar.style.left:computedStyle.left;
+			currentLeft =  parseInt(currentLeft) - 38.4;
+			yellowBar.style.setProperty("left", `${currentLeft}px`);	
+		}
+		right.addEventListener("click" , GoTo);
+		left.addEventListener("click",GoBack);
+
+
+	</script>
+</body>
+</html>
